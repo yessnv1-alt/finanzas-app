@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YESSI.DOP | Financial Nexus</title>
+    <!-- Google Fonts: Orbitron -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-black sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-magenta">YESSI</span><span class="text-cyan">.DOP</span>
+            </a>
+            <div class="profile-container" data-bs-toggle="modal" data-bs-target="#profileModal">
+                <img src="/profile.jpg" alt="Yessi Paola Nuñez Veloz" class="profile-img-nav" 
+                     onerror="this.src='https://ui-avatars.com/api/?name=Yessi+Paola&background=bc13fe&color=fff'">
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <!-- Calculador Maestro (ESTA ES LA PARTE QUE FALTABA) -->
+        <section class="master-calculator text-center mb-5">
+            <h1 class="text-magenta mb-4" style="text-shadow: 0 0 15px #ff00ff;">FINANCIAL CALCULATOR</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group input-group-lg neon-input-group">
+                        <span class="input-group-text">DOP</span>
+                        <input type="number" id="masterAmount" class="form-control bg-black text-white" placeholder="Monto en Pesos..." value="1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenedor donde JavaScript dibujará las tarjetas -->
+        <div class="row g-4" id="currencyGrid">
+            <!-- Las tarjetas aparecerán aquí automáticamente -->
+        </div>
+    </main>
+
+    <!-- Modal Profesional -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content text-white">
+                <div class="modal-body p-5">
+                    <div class="text-center mb-4">
+                        <img src="/profile.jpg" alt="Yessi Paola Nuñez Veloz" class="profile-img-modal mb-3" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Yessi+Paola&background=bc13fe&color=fff'">
+                        <h2 class="text-neon-blue">Yessi Paola Nuñez Veloz</h2>
+                        <h4 class="text-magenta">Senior Fintech Developer</h4>
+                    </div>
+                    
+                    <div class="bio-section mb-4">
+                        <p>Con más de 15 años de trayectoria en el ecosistema tecnológico, me especializo en el desarrollo de soluciones críticas Full-Stack, arquitecturas de Datos de alto rendimiento e integración de Inteligencia Artificial avanzada para el sector financiero.</p>
+                        <p>Mi enfoque combina la robustez técnica con la innovación disruptiva, transformando sistemas tradicionales en plataformas escalables.</p>
+                    </div>
+
+                    <div class="tech-stack mb-4">
+                        <h5 class="text-cyan mb-3 border-bottom border-info pb-2">TECH STACK</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <strong>Frontend:</strong> <span class="badge neon-badge-magenta">React</span> <span class="badge neon-badge-cyan">Vue</span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <strong>Backend:</strong> <span class="badge neon-badge-pink">Laravel</span> <span class="badge neon-badge-magenta">Python</span>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>AI:</strong> 
+                                <span class="badge badge-ai">Gemini</span> <span class="badge badge-ai">ChatGPT</span> 
+                                <span class="badge badge-ai">Claude</span> <span class="badge badge-ai">DeepSeek</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links d-flex justify-content-center gap-3">
+                        <a href="#" class="btn btn-outline-info"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#" class="btn btn-outline-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="btn btn-outline-light"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
